@@ -1,10 +1,25 @@
 <template>
   <div id="nav">
+    <Header title="Epic website V.1"/>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
 </template>
+
+<script>
+import { defineComponent } from 'vue'
+import Header from "@/components/Header.vue"; // @ is an alias to /src
+
+export default defineComponent({
+  name: 'app',
+  components: {
+    Header
+  }
+})
+</script>
+
+
 
 <style>
 #app {
